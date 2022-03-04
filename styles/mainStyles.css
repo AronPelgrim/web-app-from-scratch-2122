@@ -24,6 +24,16 @@ header {
     font-weight: 100;
 }
 
+main h1 {
+    height: 70vh;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4em;
+    opacity: 0;
+}
+
 ul {
     list-style-type: none;
     display: grid;
@@ -35,6 +45,10 @@ ul {
     text-align: center;
 }
 
+ul li {
+    opacity: 0;
+}
+
 ul li p {
     margin-top: 1rem;
     font-style: italic;
@@ -42,9 +56,49 @@ ul li p {
 
 ul li img {
     max-width: 90vw;
-    transition: all 0.1s ease;
+    max-height: 90vh;
 }
 
 ul li img:hover {
     cursor: pointer;
+}
+
+h1.visible {
+    animation: appear 2s both;
+}
+
+li.visible {
+    animation: appear2 2s both;
+}
+
+@keyframes appear {
+    0% {
+        clip-path: polygon(0 0,-50% 0, 0 100%,0 100%);
+   }
+    100% {
+        clip-path: polygon(0 0,120% 0,120% 120%,0 120%);
+        opacity: 1;
+   }
+}
+
+@keyframes appear2 {
+    0% {
+        clip-path: circle(30% at 0% 0%);
+        filter: grayscale(5);
+   }
+    25% {
+        clip-path: circle(25% at 50% 50%);
+   }
+    50% {
+        clip-path: circle(30% at 12% 84%);
+        filter: grayscale(5);
+   }
+    75% {
+        clip-path: circle(25% at 75% 51%);
+   }
+    100% {
+        clip-path: circle(100% at 50% 50%);
+        filter: grayscale(0);
+        opacity: 1;
+   }
 }
