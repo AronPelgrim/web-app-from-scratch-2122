@@ -21,7 +21,7 @@ export function getPaintings() {
 
             for (let i = 0; i < paintings.artObjects.length; i++) {     
               bodyList.insertAdjacentHTML('afterbegin', 
-              `<li class=""><a href="#${paintings.artObjects[i].id}"><img id="${paintings.artObjects[i].id}" src="${paintings.artObjects[i].webImage.url.slice(0, -3)+"=s1000"}"></a><p>${paintings.artObjects[i].longTitle}<p/></li>`) 
+              `<li id="${paintings.artObjects[i].id}" class=""><a href="#${paintings.artObjects[i].id}"><img src="${paintings.artObjects[i].webImage.url.slice(0, -3)+"=s1000"}"></a><p>${paintings.artObjects[i].longTitle}<p/></li>`) 
             }
 
             const options = {
