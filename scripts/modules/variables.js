@@ -1,3 +1,3 @@
-const url = 'https://www.rijksmuseum.nl/api/nl/collection?key=S0VK6DCj&q&involvedMaker=Rembrandt+van+Rijn'
+const dropDown = document.querySelector("#selectNumber")
 
-export { url }
+export { dropDown }
