@@ -10,10 +10,10 @@
     background: black;
 }
 ::-webkit-scrollbar-thumb {
-    background: #ececec;
+    background: white;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: white;
+    background: #ececec;
 }
 
 body {
@@ -111,6 +111,15 @@ ul li img {
 
 ul li img:hover {
     cursor: pointer;
+}
+
+ul li img.mystyle {
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+    animation: appear 2s both;
+    margin: 0;
+    padding: 0;
 }
 
 h1.visible {

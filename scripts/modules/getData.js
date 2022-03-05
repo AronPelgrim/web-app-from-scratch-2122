@@ -10,6 +10,7 @@ export function getPaintings() {
       "https://www.rijksmuseum.nl/api/nl/collection?key=S0VK6DCj&q=" +
       searchDropdown +
       "&ps=" + 5
+
         fetch(url)
         .then(function(response){
             return response.json() 
@@ -19,12 +20,12 @@ export function getPaintings() {
             `<h1>${paintings.artObjects[1].principalOrFirstMaker}</h1>`)
 
             for (let i = 0; i < paintings.artObjects.length; i++) {     
-            bodyList.insertAdjacentHTML('afterbegin', 
-            `<li class=""><img src="${paintings.artObjects[i].webImage.url.slice(0, -3)+"=s1000"}"><p>${paintings.artObjects[i].longTitle}<p/></li>`) 
+              bodyList.insertAdjacentHTML('afterbegin', 
+              `<li class=""><a href="#${paintings.artObjects[i].id}"><img id="${paintings.artObjects[i].id}" src="${paintings.artObjects[i].webImage.url.slice(0, -3)+"=s1000"}"></a><p>${paintings.artObjects[i].longTitle}<p/></li>`) 
             }
 
             const options = {
-                threshold: [0.4]
+                threshold: [0.6]
               };
             const observer = new IntersectionObserver(onEntry, options);
             const elements = document.querySelectorAll('li, main h1');
@@ -40,12 +41,11 @@ export function getPaintings() {
             for (let elm of elements) {
               observer.observe(elm);
             }
-            console.log(searchDropdown)
         })
 }
 
 export function replace(){
-  for (const node of document.querySelectorAll("li, img, p, main h1")) {
+  for (const node of document.querySelectorAll("li, img, p, main h1, a")) {
     const parent = node.parentNode;
     const children = Array.from(node.children);
     for (const child of children) {
