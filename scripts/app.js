@@ -1,5 +1,13 @@
 import { getPaintings } from './modules/getData.js'
-import './modules/loading.js'
+import { replace } from './modules/getData.js'
+import { dropDown } from './modules/variables.js'
 
-window.onload(getPaintings())
+dropDown.addEventListener("keypress", function (e) {
+    if (e.key === 'Enter') {
+      replace()
+      getPaintings()
+    }
+  });
+
+
 

@@ -1,11 +1,16 @@
 import { bodyE } from './bodyElement.js'
-import { url } from './variables.js'
-
+import { dropDown } from './variables.js'
 export function getPaintings() {
     
     const bodyList = bodyE('ul')
 
-    fetch(url) 
+    const searchDropdown = dropDown.options[dropDown.selectedIndex].value.toString();
+
+    let url =
+      "https://www.rijksmuseum.nl/api/nl/collection?key=S0VK6DCj&q=" +
+      searchDropdown +
+      "&ps=" + 5
+        fetch(url)
         .then(function(response){
             return response.json() 
         })
@@ -35,5 +40,18 @@ export function getPaintings() {
             for (let elm of elements) {
               observer.observe(elm);
             }
+            console.log(searchDropdown)
         })
+}
+
+export function replace(){
+  for (const node of document.querySelectorAll("li, img, p, main h1")) {
+    const parent = node.parentNode;
+    const children = Array.from(node.children);
+    for (const child of children) {
+      node.removeChild(child);
+      parent.insertBefore(child, node);
+    }
+    parent.removeChild(node);
+  }
 }
