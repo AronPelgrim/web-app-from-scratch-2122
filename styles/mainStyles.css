@@ -10,10 +10,10 @@
     background: black;
 }
 ::-webkit-scrollbar-thumb {
-    background: #ececec;
+    background: white;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: white;
+    background: #ececec;
 }
 
 body {
@@ -50,7 +50,19 @@ main h1.standard {
     opacity: 1;
 }
 
-main select {
+main p#error {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    font-weight: bold;
+    font-size: 1.5em;
+    animation: appear 1s both;
+    opacity: 0;
+}
+
+main input {
     position: absolute;
     top: 58%;
     left: 50%;
@@ -67,7 +79,7 @@ main select {
     font-family: 'Montserrat', sans-serif;
 }
 
-select option{
+select input{
     transition: .2s;
   }
 
@@ -99,18 +111,43 @@ ul li {
     opacity: 0;
 }
 
+ul li button {
+    display: none;
+    transition: 2s;
+}
+
 ul li p {
     margin-top: 1rem;
     font-style: italic;
 }
 
 ul li img {
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: 80vw;
+    max-height: 80vh;
+    transition: 2s;
 }
 
 ul li img:hover {
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transform: translateY(-.5em);
+    filter: brightness(1.15);
+}
+
+ul li.detail img {
+    max-width: 95vw;
+    max-height: 95vh;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transform: translateY(-.5em);
+    filter: brightness(1.15);
+}
+
+ul li.detail button {
+    display: block;
+}
+
+ul li.detail p {
+    font-size: 1.3em;
 }
 
 h1.visible {
@@ -151,4 +188,9 @@ li.visible {
         filter: grayscale(0);
         opacity: 1;
    }
+}
+
+
+.hide {
+    display: none;
 }

@@ -1,15 +1,17 @@
 import { bodyE } from './bodyElement.js'
-import { dropDown } from './variables.js'
+import { inputSearch } from './variables.js'
+import { loading } from './loading.js'
 export function getPaintings() {
     
     const bodyList = bodyE('ul')
 
-    const searchDropdown = dropDown.options[dropDown.selectedIndex].value.toString();
+    const search = inputSearch.value;
 
     let url =
       "https://www.rijksmuseum.nl/api/nl/collection?key=S0VK6DCj&q=" +
-      searchDropdown +
+      search +
       "&ps=" + 5
+
         fetch(url)
         .then(function(response){
             return response.json() 
@@ -19,39 +21,13 @@ export function getPaintings() {
             `<h1>${paintings.artObjects[1].principalOrFirstMaker}</h1>`)
 
             for (let i = 0; i < paintings.artObjects.length; i++) {     
-            bodyList.insertAdjacentHTML('afterbegin', 
-            `<li class=""><img src="${paintings.artObjects[i].webImage.url.slice(0, -3)+"=s1000"}"><p>${paintings.artObjects[i].longTitle}<p/></li>`) 
+              bodyList.insertAdjacentHTML('afterbegin', 
+              `<li id="${paintings.artObjects[i].id}" class=""><button>X</button><a href="#${paintings.artObjects[i].id}"><img src="${paintings.artObjects[i].webImage.url.slice(0, -3)+"=s1000"}"></a><p>${paintings.artObjects[i].longTitle}<p/></li>`) 
             }
-
-            const options = {
-                threshold: [0.4]
-              };
-            const observer = new IntersectionObserver(onEntry, options);
-            const elements = document.querySelectorAll('li, main h1');
-            
-            function onEntry(entry) {
-              entry.forEach((change) => {
-                if(change.isIntersecting) {
-                  change.target.classList.add('visible');
-                }
-              });
-            }
-            
-            for (let elm of elements) {
-              observer.observe(elm);
-            }
-            console.log(searchDropdown)
+            loading()
         })
-}
-
-export function replace(){
-  for (const node of document.querySelectorAll("li, img, p, main h1")) {
-    const parent = node.parentNode;
-    const children = Array.from(node.children);
-    for (const child of children) {
-      node.removeChild(child);
-      parent.insertBefore(child, node);
-    }
-    parent.removeChild(node);
-  }
+        .catch(function(){
+          bodyList.insertAdjacentHTML('beforebegin', 
+            `<p id="error">Error, this page doesn't exist, try another artist!</p>`)
+        })
 }

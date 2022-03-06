@@ -1,13 +1,21 @@
-import { getPaintings } from './modules/getData.js'
-import { replace } from './modules/getData.js'
-import { dropDown } from './modules/variables.js'
+import {
+	getPaintings
+} from './modules/getData.js'
+import {
+	routerChanged
+} from './modules/router.js'
+import {
+	replace
+} from './modules/replaceElements.js'
+import {
+	inputSearch
+} from './modules/variables.js'
 
-dropDown.addEventListener("keypress", function (e) {
-    if (e.key === 'Enter') {
-      replace()
-      getPaintings()
-    }
-  });
+window.addEventListener("hashchange", routerChanged);
 
-
-
+inputSearch.addEventListener("keypress", function(e) {
+	if (e.key === 'Enter') {
+		replace()
+		getPaintings()
+	}
+});
