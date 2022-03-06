@@ -1,3 +1,3 @@
-const dropDown = document.querySelector("#selectNumber")
+const inputSearch = document.querySelector("#site-search")
 
-export { dropDown }
+export { inputSearch }

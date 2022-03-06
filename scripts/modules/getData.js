@@ -1,15 +1,15 @@
 import { bodyE } from './bodyElement.js'
-import { dropDown } from './variables.js'
+import { inputSearch } from './variables.js'
 import { loading } from './loading.js'
 export function getPaintings() {
     
     const bodyList = bodyE('ul')
 
-    const searchDropdown = dropDown.options[dropDown.selectedIndex].value;
+    const search = inputSearch.value;
 
     let url =
       "https://www.rijksmuseum.nl/api/nl/collection?key=S0VK6DCj&q=" +
-      searchDropdown +
+      search +
       "&ps=" + 5
 
         fetch(url)

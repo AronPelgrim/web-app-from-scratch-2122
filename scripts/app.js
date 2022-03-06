@@ -8,12 +8,12 @@ import {
 	replace
 } from './modules/replaceElements.js'
 import {
-	dropDown
+	inputSearch
 } from './modules/variables.js'
 
 window.addEventListener("hashchange", routerChanged);
 
-dropDown.addEventListener("keypress", function(e) {
+inputSearch.addEventListener("keypress", function(e) {
 	if (e.key === 'Enter') {
 		replace()
 		getPaintings()

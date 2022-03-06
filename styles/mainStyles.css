@@ -62,7 +62,7 @@ main p#error {
     opacity: 0;
 }
 
-main select {
+main input {
     position: absolute;
     top: 58%;
     left: 50%;
@@ -79,7 +79,7 @@ main select {
     font-family: 'Montserrat', sans-serif;
 }
 
-select option{
+select input{
     transition: .2s;
   }
 
@@ -131,7 +131,6 @@ ul li img:hover {
 
 ul li.detail img {
     animation: appear 1s both;
-
 }
 
 ul li.detail p {
@@ -176,4 +175,9 @@ li.visible {
         filter: grayscale(0);
         opacity: 1;
    }
+}
+
+
+.hide {
+    display: none;
 }
