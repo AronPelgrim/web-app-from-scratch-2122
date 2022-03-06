@@ -111,15 +111,20 @@ ul li {
     opacity: 0;
 }
 
+ul li button {
+    display: none;
+    transition: 2s;
+}
+
 ul li p {
     margin-top: 1rem;
     font-style: italic;
 }
 
 ul li img {
-    max-width: 90vw;
-    max-height: 90vh;
-    transition: .5s;
+    max-width: 80vw;
+    max-height: 80vh;
+    transition: 2s;
 }
 
 ul li img:hover {
@@ -130,7 +135,15 @@ ul li img:hover {
 }
 
 ul li.detail img {
-    animation: appear 1s both;
+    max-width: 95vw;
+    max-height: 95vh;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transform: translateY(-.5em);
+    filter: brightness(1.15);
+}
+
+ul li.detail button {
+    display: block;
 }
 
 ul li.detail p {

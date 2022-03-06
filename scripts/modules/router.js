@@ -10,8 +10,9 @@ export function routerChanged() {
             liDetail.classList.add("detail")
             
 			for (i = 0; i < liHide.length; i++) {
-                liHide[i].className += " hide" 
+                liHide[i].className = " hide" 
             }
+            
 
 			break;
 		}
