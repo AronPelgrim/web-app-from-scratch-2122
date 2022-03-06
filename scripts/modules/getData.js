@@ -26,4 +26,8 @@ export function getPaintings() {
             }
             loading()
         })
+        .catch(function(){
+          bodyList.insertAdjacentHTML('beforebegin', 
+            `<p id="error">Error, this page doesn't exist, try another artist!</p>`)
+        })
 }

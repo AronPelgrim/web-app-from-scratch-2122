@@ -4,7 +4,6 @@ export function routerChanged() {
 	for (let i = 0; i < li.length; i++) {
 
 		if ("#" + (li[i]).id == hash) {
-
 			const liDetail = document.getElementById(li[i].id)
 			liDetail.classList.add("detail");
 
@@ -18,6 +17,6 @@ export function routerChanged() {
 				parent.removeChild(node);
 			}
 			break;
-		} 
+		}
 	}
 }
