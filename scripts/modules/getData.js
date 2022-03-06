@@ -5,7 +5,7 @@ export function getPaintings() {
     
     const bodyList = bodyE('ul')
 
-    const searchDropdown = dropDown.options[dropDown.selectedIndex].value.toString();
+    const searchDropdown = dropDown.options[dropDown.selectedIndex].value;
 
     let url =
       "https://www.rijksmuseum.nl/api/nl/collection?key=S0VK6DCj&q=" +
