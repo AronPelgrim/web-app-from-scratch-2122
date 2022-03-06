@@ -6,7 +6,7 @@ import {
 } from './modules/router.js'
 import {
 	replace
-} from './modules/getData.js'
+} from './modules/replaceElements.js'
 import {
 	dropDown
 } from './modules/variables.js'
