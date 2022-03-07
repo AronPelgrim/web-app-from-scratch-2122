@@ -27,6 +27,8 @@ export function getPaintings() {
               titlePainting = titlePainting.replace('’', '')
               titlePainting = titlePainting.replace('‘', '')
               titlePainting = titlePainting.replace(',', '')
+              titlePainting = titlePainting.replace('.', '')
+              titlePainting = titlePainting.replace('ë', 'e')
               titlePainting = titlePainting.split(" ").join("-")
               console.log(titlePainting)
               bodyList.insertAdjacentHTML('afterbegin', 

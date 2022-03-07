@@ -14,6 +14,7 @@ export function back () {
                 liShow[i].classList.remove("hide")
             }
         }
+        window.location.hash = "";
 	}
 }
 
