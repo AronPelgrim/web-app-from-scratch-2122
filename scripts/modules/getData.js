@@ -1,6 +1,7 @@
 import { bodyE } from './bodyElement.js'
 import { inputSearch } from './variables.js'
 import { loading } from './loading.js'
+import { back } from './hideDetail.js'
 
 export function getPaintings() {
     
@@ -29,10 +30,16 @@ export function getPaintings() {
               titlePainting = titlePainting.split(" ").join("-")
               console.log(titlePainting)
               bodyList.insertAdjacentHTML('afterbegin', 
-              `<li id="${titlePainting}" class=""><a href="#${search}">X</a><a href="#${titlePainting}"><img src="${paintings.artObjects[i].webImage.url.slice(0, -3)+"=s1000"}"></a><p>${paintings.artObjects[i].longTitle}<p/></li>`) 
+              `<li id="${titlePainting}" class=""><button>X</button><a href="#${titlePainting}"><img src="${paintings.artObjects[i].webImage.url.slice(0, -3)+"=s1000"}"></a><p>${paintings.artObjects[i].longTitle}<p/></li>`) 
             }
             loading()
         })
+        .then(function(response){
+           const buttons = document.querySelectorAll('li button')
+           buttons.forEach(button => {
+             button.addEventListener("click", back)
+           });
+      })
         .catch(function(){
           bodyList.insertAdjacentHTML('beforebegin', 
             `<p id="error">Error, this page doesn't exist, try another artist!</p>`)

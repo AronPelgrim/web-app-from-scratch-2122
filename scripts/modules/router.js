@@ -1,3 +1,9 @@
+import {
+	inputSearch
+} from './variables.js'
+
+const search = inputSearch.value;
+
 export function routerChanged() {
 	const hash = window.location.hash;
 	const li = document.querySelectorAll('li')
@@ -13,7 +19,10 @@ export function routerChanged() {
                 liHide[i].className = " hide" 
             }
             
-			break;
 		}
+	}
+	console.log(search)
+	if (hash == "#" + search) {
+		console.log("hallo")
 	}
 }
