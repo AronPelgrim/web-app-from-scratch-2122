@@ -85,12 +85,12 @@ main label::before {
 	content: "";
 	top: -10em;
 	left: calc(50% - 1.5em);
-	width: 4em;
-	height: 4em;
+	width: 3em;
+	height: 3em;
 	border: .1em solid #000;
 	opacity: 1;
 	border-radius: 50%;
-	animation: loader 3s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+	animation: loader 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 ul {
 	list-style-type: none;
