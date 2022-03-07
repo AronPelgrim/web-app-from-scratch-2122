@@ -13,7 +13,6 @@ export function routerChanged() {
                 liHide[i].className = " hide" 
             }
             
-
 			break;
 		}
 	}

@@ -1,6 +1,7 @@
 import { bodyE } from './bodyElement.js'
 import { inputSearch } from './variables.js'
 import { loading } from './loading.js'
+
 export function getPaintings() {
     
     const bodyList = bodyE('ul')
@@ -20,9 +21,15 @@ export function getPaintings() {
             bodyList.insertAdjacentHTML('beforebegin', 
             `<h1>${paintings.artObjects[1].principalOrFirstMaker}</h1>`)
 
-            for (let i = 0; i < paintings.artObjects.length; i++) {     
+            for (let i = 0; i < paintings.artObjects.length; i++) {   
+              let titlePainting = paintings.artObjects[i].title;
+              titlePainting = titlePainting.replace('’', '')
+              titlePainting = titlePainting.replace('‘', '')
+              titlePainting = titlePainting.replace(',', '')
+              titlePainting = titlePainting.split(" ").join("-")
+              console.log(titlePainting)
               bodyList.insertAdjacentHTML('afterbegin', 
-              `<li id="${paintings.artObjects[i].id}" class=""><button>X</button><a href="#${paintings.artObjects[i].id}"><img src="${paintings.artObjects[i].webImage.url.slice(0, -3)+"=s1000"}"></a><p>${paintings.artObjects[i].longTitle}<p/></li>`) 
+              `<li id="${titlePainting}" class=""><a href="#${search}">X</a><a href="#${titlePainting}"><img src="${paintings.artObjects[i].webImage.url.slice(0, -3)+"=s1000"}"></a><p>${paintings.artObjects[i].longTitle}<p/></li>`) 
             }
             loading()
         })
