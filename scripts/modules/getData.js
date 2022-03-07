@@ -1,6 +1,6 @@
 import { bodyE } from './bodyElement.js'
 import { inputSearch } from './variables.js'
-import { loading } from './loading.js'
+import { loading } from './animationShow.js'
 import { back } from './hideDetail.js'
 
 export function getPaintings() {
@@ -30,7 +30,6 @@ export function getPaintings() {
               titlePainting = titlePainting.replace('.', '')
               titlePainting = titlePainting.replace('ë', 'e')
               titlePainting = titlePainting.split(" ").join("-")
-              console.log(titlePainting)
               bodyList.insertAdjacentHTML('afterbegin', 
               `<li id="${titlePainting}" class=""><button>X</button><a href="#${titlePainting}"><img src="${paintings.artObjects[i].webImage.url.slice(0, -3)+"=s1000"}"></a><p>${paintings.artObjects[i].longTitle}<p/></li>`) 
             }

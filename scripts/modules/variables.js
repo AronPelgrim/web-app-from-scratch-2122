@@ -1,4 +1,4 @@
-const inputSearch = document.querySelector("#site-search")
+const inputSearch = document.querySelector("#search-bar")
 
 
 export { inputSearch }

@@ -72,13 +72,8 @@ main input {
 	overflow: hidden;
 	font-family: 'Montserrat', sans-serif;
 }
-select input {
-	transition: .2s;
-}
-select option:hover {
-	background-color: black;
-	color: white;
-	cursor: pointer;
+main input[type="search"]::-webkit-search-cancel-button {
+	 display: none; 
 }
 main label {
 	position: absolute;
