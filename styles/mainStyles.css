@@ -33,6 +33,10 @@ header {
 	font-size: 1.5rem;
 	font-weight: 100;
 }
+header a {
+	text-decoration: none;
+	color: #000;
+}
 main h1 {
 	margin: 2em;
 	height: 33vh;
