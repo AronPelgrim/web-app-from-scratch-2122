@@ -3,7 +3,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
 
-Welcome to my repository. Here you can find my art app called **Art @ Home**. The concept is that the user can view art from the Rijksmuseum on their preferred device.
+Welcome to my repository. Here you can find my art app called **Art @ Home**. The concept is that the user can view art from the Rijksmuseum on their device. The user can look for their favourite artist and then the app will load in 5 paintings of that artist. If you click on the image, the user will arrive on the detail page, where they can view their favourite piece of art at home.
 
 Follow this link to check out the full app!
 [Art @ Home app](https://aronpelgrim.github.io/web-app-from-scratch-2122/)
@@ -14,6 +14,8 @@ Follow this link to check out the full app!
 -   [API](#api)
 -   [A preview](#a-preview)
 -   [Activity diagram](#activity-diagram)
+-   [How to install](#how-to-install)
+-   [My wishlist](#my-wishlist)
 -   [Any issues?](#any-issues)
 -   [License](#license)
 
