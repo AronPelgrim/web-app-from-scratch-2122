@@ -9,6 +9,8 @@ Welcome to my repository. Here you can find my art app called **Art @ Home**. Th
 
 -   [User story](#user-story)
 -   [API](#api)
+-   [A preview](#a-preview)
+-   [Activity diagram](#activity-diagram)
 -   [Any issues?](#any-issues)
 -   [License](#license)
 
