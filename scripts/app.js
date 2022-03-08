@@ -9,7 +9,7 @@ import {
 } from './modules/replaceElements.js'
 import {
 	inputSearch
-} from './modules/variables.js'
+} from './modules/searchBar.js'
 
 window.addEventListener("hashchange", routerChanged);
 

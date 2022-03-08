@@ -3,7 +3,7 @@ import {
 } from './bodyElement.js'
 import {
 	inputSearch
-} from './variables.js'
+} from './searchBar.js'
 import {
 	visibleAnimation
 } from './animationShow.js'
