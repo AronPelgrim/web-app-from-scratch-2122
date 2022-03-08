@@ -15,6 +15,9 @@ Welcome to my repository. Here you can find my art app called **Art @ Home**. Th
 ## A preview
 <img width="1128" alt="Schermafbeelding 2022-03-08 144013" src="https://user-images.githubusercontent.com/74137185/157249410-7e098815-1f1e-48b4-8a09-6ca8c40cb6d5.png">
 
+Follow this link to check out the full app!
+[Art @ Home app](https://aronpelgrim.github.io/web-app-from-scratch-2122/)
+
 ## User story
 As an art lover, I want to be able to search and view art from the Rijksmuseum at home, so that I can still enjoy art during a lockdown.
 
