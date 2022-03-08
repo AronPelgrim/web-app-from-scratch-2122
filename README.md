@@ -23,7 +23,8 @@ Follow this link to check out the full app!
 As an art lover, I want to be able to search and view art from the Rijksmuseum at home, so that I can still enjoy art during a lockdown.
 
 ## API
-For this project, I'm using the Rijksdata API. To start using the data and images, you need to obtain an API key by registering for a Rijksstudio account. You will be given a key instantly upon request, which you can find at the advanced settings of your Rijksstudio account.
+For this project, I'm using the Rijksdata API. To start using the data, you need to obtain an API key by registering for a Rijksstudio account. You will be given a key instantly upon request, which you can find at the advanced settings of your Rijksstudio account. Some of the data elements that you can use from the API are the ```webImage``` to obtain the image, ```title``` for a short description, ```longTitle``` for a long description, ```principalOrFirstMaker``` for the name of the artist and ```id```, for the id of the painting.
+
 
 ## A preview
 <img width="1128" alt="Schermafbeelding 2022-03-08 144013" src="https://user-images.githubusercontent.com/74137185/157249410-7e098815-1f1e-48b4-8a09-6ca8c40cb6d5.png">
