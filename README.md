@@ -25,7 +25,7 @@ Follow this link to check out the full app!
 [Art @ Home app](https://aronpelgrim.github.io/web-app-from-scratch-2122/)
 
 ## Activity diagram
-![Acrtivity diagram WAFS](https://user-images.githubusercontent.com/74137185/157251688-d5d79289-3765-461a-875f-3fd532427182.jpg)
+![Acrtivity diagram WAFS](https://user-images.githubusercontent.com/74137185/157252445-741c94e9-1e8f-4ea0-a620-3bea5ded9e35.jpg)
 
 ## Any issues?
 You can create an issue in this repository to let me know what's wrong.
