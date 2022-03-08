@@ -40,6 +40,12 @@ For this project, I'm using the Rijksdata API. To start using the data and image
 $ cd web-app-from-scratch-2122
 ```
 
+## My wishlist
+- [ ] Jupiter
+- [ ] Saturn
+- [ ] Uranus
+- [ ] Neptune
+
 ## Any issues?
 You can create an issue in this repository to let me know what's wrong.
 
