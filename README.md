@@ -41,10 +41,8 @@ $ cd web-app-from-scratch-2122
 ```
 
 ## My wishlist
-- [ ] Jupiter
-- [ ] Saturn
-- [ ] Uranus
-- [ ] Neptune
+- [ ] Adding paintings to a favourite list.
+- [ ] Giving specific errors to specific situations.
 
 ## Any issues?
 You can create an issue in this repository to let me know what's wrong.
