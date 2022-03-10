@@ -41,7 +41,7 @@ header a:hover {
 	animation: hover-button 2s ease-in-out infinite both;
 }
 main h1 {
-	margin: 2em;
+	margin: 2em 0;
 	height: 33vh;
 	text-transform: uppercase;
 	display: flex;
@@ -50,6 +50,7 @@ main h1 {
 	font-size: 4em;
 	opacity: 0;
 	background-color: #fff;
+	text-align: center;
 }
 main p#error {
 	position: absolute;
@@ -66,7 +67,7 @@ main p#error {
 }
 main input {
 	position: absolute;
-	top: 58%;
+	top: 62%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 10;
@@ -85,9 +86,10 @@ main input[type="search"]::-webkit-search-cancel-button {
 }
 main label {
 	position: absolute;
-	top: 50%;
+	top: 53%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	text-align: center;
 }
 main label::before {
 	position: absolute;
@@ -239,3 +241,14 @@ li.visible {
     opacity: 1;
   }
 }
+@media only screen and (max-width: 880px) {
+	header {
+		transform: rotate(0deg) translateX(0);
+		transform-origin: 0;
+		top: 0;
+		left: 5%;
+		z-index: 0;
+		position: absolute;
+		justify-content: left;
+	}
+  }
