@@ -1,3 +1,4 @@
+//Bron: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
 export function visibleAnimation() {
 	const options = {
 		threshold: [0.6]
