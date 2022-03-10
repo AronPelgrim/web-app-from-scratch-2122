@@ -20,16 +20,21 @@ export function getPaintings() {
 	fetch(url).then((response) => {
 		return response.json()
 	}).then((paintings) => {
+		const filterP = paintings.artObjects.filter(painting => {
+			const searchValue = search.toUpperCase()
+			return painting.principalOrFirstMaker.toUpperCase().includes(searchValue)
+		})
+		console.log(filterP);
 		bodyList.insertAdjacentHTML('beforebegin', `<h1>${paintings.artObjects[1].principalOrFirstMaker}</h1>`)
-		for (let i = 0; i < paintings.artObjects.length; i++) {
-			let titlePainting = paintings.artObjects[i].title;
+		for (let i = 0; i < filterP.length; i++) {
+			let titlePainting = filterP[i].title;
 			titlePainting = titlePainting.replace('’', '')
 			titlePainting = titlePainting.replace('‘', '')
 			titlePainting = titlePainting.replace(',', '')
 			titlePainting = titlePainting.replace('.', '')
 			titlePainting = titlePainting.replace('ë', 'e')
 			titlePainting = titlePainting.split(" ").join("-")
-			bodyList.insertAdjacentHTML('afterbegin', `<li id="${titlePainting}" class=""><button>X</button><a href="#${titlePainting}"><img src="${paintings.artObjects[i].webImage.url.slice(0, -3)+"=s1000"}"></a><p>${paintings.artObjects[i].longTitle}<p/></li>`)
+			bodyList.insertAdjacentHTML('afterbegin', `<li id="${titlePainting}" class=""><button>X</button><a href="#${titlePainting}"><img src="${filterP[i].webImage.url.slice(0, -3)+"=s1000"}"></a><p>${filterP[i].longTitle}<p/></li>`)
 		}
 		visibleAnimation()
 	}).then(() => {
