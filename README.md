@@ -43,6 +43,11 @@ $ git clone https://github.com/AronPelgrim/web-app-from-scratch-2122.git
 $ cd web-app-from-scratch-2122
 ```
 
+### Add your API key from Rijksdata
+```
+const apiKey = ""
+```
+
 ## My wishlist
 - [ ] Being able to paintings to a favourites list.
 - [ ] The app giving specific errors to specific situations.
