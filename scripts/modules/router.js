@@ -1,3 +1,4 @@
+// Checks ihash, if hash is title of painting, this painting gets class detail, the rest gets class hide
 export function routerChanged() {
 	const hash = window.location.hash;
 	const li = document.querySelectorAll('li')

@@ -1,4 +1,5 @@
 //Bron: https://stackoverflow.com/questions/58984494/javascript-how-to-replace-multiple-html-nodes?noredirect=1&lq=1
+//Deletes existing paintings, activates when keypress enter is done, before fethcing new paintings
 export function replace() {
 	for (const node of document.querySelectorAll("li, img, p, main h1, button, main a")) {
 		const parent = node.parentNode;

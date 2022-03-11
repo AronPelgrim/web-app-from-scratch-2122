@@ -1,3 +1,4 @@
+//Removes class detail on detailed painting and removes class hide on the other paintings
 export function back() {
 	const li = document.querySelectorAll('li')
 	const hash = window.location.hash;
